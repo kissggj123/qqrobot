@@ -7,6 +7,8 @@ QQ机器人
 + 在这个项目的目录下，使用 npm install 命令安装依赖项
 + 使用 npm run s 命令启动
 
+插件在这里下载： https://github.com/Chocolatl/qqlight-websocket/releases
+
 ## 许可证
 
 ```
