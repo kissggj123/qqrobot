@@ -22,10 +22,9 @@ module.exports = class news {
     // get Hacknews list
     async getItnewsList() {
         try {
-            // let data = await axios.get(`https://o.go2yd.com/open-api/sample/channel?appid=beHVtAOPwVoppZTmjcmD5Qaz&timestamp=1557510409&nonce=39534&secretkey=9f047c2a6f2a05ade876a51bbe56d868b6bf1324&channel=%E7%A7%91%E6%8A%80`)
             let data = await axios.get('https://api.ithome.com/json/newslist/news?r=0')
             if (data.status === 200) {
-                let res = data.data.newslist
+                let res = data.data.newslist;
                 if (res) {
                     return res
                 }
@@ -34,4 +33,4 @@ module.exports = class news {
             console.error(error)
         }
     }
-}
+};
