@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const _SM = require('../index')._SM;
 require('../schema/user');
 const user = mongoose.model('user');
+const store = require('../store');
 
 // 新增关键词
 module.exports = async (req) => {
@@ -42,7 +43,7 @@ module.exports = async (req) => {
         let p1 = (async function () {
             let getList_r = '弟';
             if (data.time.getDate() === now.getDate()) {
-                await getList(id, group, {time: -1}).then((r) => {
+                await getList(id, group, store.today, {time: -1}).then((r) => {
                     getList_r = r;
                 });
             }
@@ -60,8 +61,8 @@ module.exports = async (req) => {
             await _SM(req, resp)
         });
     };
-    const getList = async (id, group, rule) => {
-        return await user.find({group: group}).sort(rule).then((data) => {
+    const getList = async (id, group, time_limit, rule) => {
+        return await user.find({group: group, time: {$gt: time_limit}}).sort(rule).then((data) => {
             if (data.length) {
                 let index = data.findIndex(function (x) {
                     return x.qq == id

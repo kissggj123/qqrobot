@@ -2,20 +2,19 @@ const axios = require('axios')
 
 module.exports = class news {
     constructor() {
-        this.data = '早日科技新闻\n'
+        this.data = []
     }
 
     async init() {
-        let list = await this.getItnewsList()
+        let list = await this.getItnewsList();
         if (list) {
             for (let i = 0; i < list.length; i++) {
                 if (list[i].lapinid) {
                 } else {
-                    this.data += `\n${list[i].title}\n`
+                    this.data.push(list[i].title)
                 }
             }
-            // console.log(this.data)
-            return this.data
+            return this.data.join('\n - - - - \n')
         }
     }
 
