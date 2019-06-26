@@ -1,8 +1,13 @@
 module.exports = {
     dbPath: 'mongodb://127.0.0.1:xxx/',
+    // mongodb 数据库接口
     wsPath: 'ws://127.0.0.1:xxx/',
+    // 插件提供的 websocket 接口
     group: [],
+    // 特殊群组
     bing_pic_path: "./out.jpg",
+    // bing 壁纸的存放地址
     morning_pic_path:''
-    //ex: C:\\Users\\Administrator\\Desktop\\QQLight\\QQLight\\img\\morning.jpg
+    // 早上好 图片的存放地址
+    // ex: C:\\Users\\Administrator\\Desktop\\QQLight\\QQLight\\img\\morning.jpg
 };

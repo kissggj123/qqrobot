@@ -2,12 +2,22 @@ QQ机器人
 
 ## 如何使用
 
-+ 在要运行QQ机器人的装有Windows系统的电脑（服务器）上安装 QQlight
-+ 为 QQlight 安装插件，以提供 websocket 通信接口
-+ 在这个项目的目录下，使用 npm install 命令安装依赖项
-+ 使用 npm run s 命令启动
+在装有Windows系统的电脑（服务器）上安装 QQlight
 
-插件在这里下载： https://github.com/Chocolatl/qqlight-websocket/releases
+> QQlight 是一个QQ机器人 类似于酷Q
+
+为 QQlight 安装插件，以提供 websocket 通信接口
+
+> 插件在这里下载： https://github.com/Chocolatl/qqlight-websocket/releases
+
+在这个项目的目录下，使用 npm install 命令安装依赖项
+
+> 这是一个 nodejs 项目，如果你不知道什么是 nodejs，那么你需要先配置相关环境
+
+将 conf.js.txt 文件里内容稍作修改，并把文件名改为 conf.js
+
+使用 npm run s 命令启动
+
 
 ## 许可证
 
